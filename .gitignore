@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+*.pyd
+*.dll
+data/chroma_db/
+*.gz
+.env
+models/
+*.pth
+*.pt
