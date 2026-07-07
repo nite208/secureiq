@@ -1,0 +1,19 @@
+2026-07-07 08:01:01 INFO user login success from 10.1.0.2
+2026-07-07 08:02:03 INFO user login success from 10.1.0.5
+2026-07-07 08:03:10 INFO admin login success from 10.1.0.10
+2026-07-07 08:04:16 WARN login failed for user root from 192.168.1.20
+2026-07-07 08:05:25 ERROR login failed for user admin from 192.168.1.20
+2026-07-07 08:06:31 ERROR login failed for user admin from 192.168.1.20
+2026-07-07 08:07:40 ERROR login failed for user admin from 192.168.1.20
+2026-07-07 08:08:51 ERROR login failed for user admin from 192.168.1.20
+2026-07-07 08:09:52 WARN repeated access attempt from 198.51.100.10
+2026-07-07 08:10:55 INFO user login success from 10.1.0.8
+2026-07-07 08:11:57 WARN suspicious admin access attempt from 198.51.100.20
+2026-07-07 08:12:02 ERROR password reset attempted by admin from 198.51.100.20
+2026-07-07 08:13:10 INFO session opened for user alice
+2026-07-07 08:14:18 INFO session closed for user alice
+2026-07-07 08:15:22 INFO user login success from 10.1.0.3
+2026-07-07 08:16:30 ERROR service error on gateway from 10.1.0.1
+2026-07-07 08:17:40 WARN multiple failed login attempts from 203.0.113.42
+2026-07-07 08:18:44 WARN admin access denied from 203.0.113.42
+2026-07-07 08:19:51 INFO user login success from 10.1.0.4

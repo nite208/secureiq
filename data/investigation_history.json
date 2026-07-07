@@ -7,5 +7,14 @@
     "alert_sent": true,
     "event_type": "Weapon found",
     "severity": "Critical"
+  },
+  {
+    "timestamp": "2026-07-07T11:52:31.309652+00:00",
+    "alert": "Fire detected in server room camera 3 at 11pm. Smoke visible.",
+    "report": "**Incident Investigation Report: Server Room Fire**\n\n**Summary:**\nA fire was detected in the server room at 11pm, as seen on camera 3. Smoke was visible, indicating a high-severity incident. This report outlines the evidence, risk assessment, and recommended next steps to address the situation.\n\n**Evidence:**\n- Camera 3 footage shows smoke and fire in the server room at 11pm.\n- No software vulnerabilities (CVE IDs) are applicable, as this is a physical incident.\n- The fire was confined to the server room, but the exact cause and extent of damage are unknown.\n\n**Risk Assessment:**\nThe risk score for this incident is 100, indicating a high level of severity. The fire poses a significant threat to the server room equipment, data, and the overall safety of the facility.\n\n**Recommended Next Steps:**\n1. **Immediate Action:** Ensure the fire is extinguished and the area is safe. Activate the fire suppression system if available.\n2. **Damage Assessment:** Conduct a thorough inspection of the server room to assess the damage to equipment and infrastructure.\n3. **Root Cause Analysis:** Investigate the cause of the fire to prevent future incidents.\n4. **Data Recovery:** Evaluate the impact on data storage and develop a plan for recovery or restoration if necessary.\n5. **Facility Safety Check:** Verify that the facility's fire safety measures are functioning correctly and comply with safety standards.\n6. **Review and Update Safety Procedures:** Use this incident as an opportunity to review and update fire safety procedures and emergency response plans.\n\nBy following these steps, we can mitigate the immediate risks, understand the cause of the fire, and take proactive measures to prevent similar incidents in the future.",
+    "risk_score": 100,
+    "alert_sent": true,
+    "event_type": "Fire",
+    "severity": "High"
   }
 ]

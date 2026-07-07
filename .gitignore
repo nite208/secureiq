@@ -9,3 +9,4 @@ data/chroma_db/
 models/
 *.pth
 *.pt
+.venv/
