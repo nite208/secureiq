@@ -4,6 +4,7 @@ from typing import Dict
 from dotenv import load_dotenv
 from fastapi import FastAPI
 
+from agents.api import router as agent_router
 from rag.api import router as rag_router
 from rag.embedder import get_or_build_index
 
@@ -11,6 +12,7 @@ load_dotenv()
 
 app = FastAPI(title="SecureIQ", version="1.0.0")
 app.include_router(rag_router)
+app.include_router(agent_router)
 
 
 @app.get("/")

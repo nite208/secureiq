@@ -1,0 +1,11 @@
+[
+  {
+    "timestamp": "2026-07-07T11:40:46.916515+00:00",
+    "alert": "Weapon found in restricted area. Critical threat. Immediate response required.",
+    "report": "**Incident Investigation Report: Weapon Found in Restricted Area**\n\n**Summary:**\nA critical incident occurred when a weapon was discovered in a restricted area, posing an immediate threat to safety and security. This report outlines the findings, risk assessment, and recommended next steps to mitigate the threat and prevent future occurrences.\n\n**Evidence:**\nThe investigation revealed that:\n- A weapon was found in a restricted area, which is off-limits to unauthorized personnel.\n- There are no records of a similar incident (CVE) related to a weapon being found in a restricted area.\n- The restricted area is supposed to have controlled access, but it appears that security protocols may have been breached.\n\n**Risk Assessment:**\nThe risk score for this incident is 90, indicating a critical threat. The presence of a weapon in a restricted area poses a significant risk to the safety and security of personnel, assets, and operations.\n\n**Recommended Next Steps:**\nTo address the incident and prevent future occurrences, the following steps are recommended:\n1. **Immediate Action:** Secure the restricted area and ensure that all personnel are accounted for and safe.\n2. **Investigation:** Conduct a thorough investigation to determine how the weapon was introduced into the restricted area and identify any security breaches or vulnerabilities.\n3. **Security Protocol Review:** Review and update security protocols to prevent similar incidents, including access controls, surveillance, and monitoring.\n4. **Personnel Screening:** Screen personnel with access to the restricted area to ensure that they are authorized and do not pose a security risk.\n5. **Incident Reporting:** Document the incident and update relevant records to ensure that similar incidents can be tracked and analyzed in the future.\n\nBy taking these steps, we can mitigate the threat, prevent future incidents, and ensure a safe and secure environment.",
+    "risk_score": 90,
+    "alert_sent": true,
+    "event_type": "Weapon found",
+    "severity": "Critical"
+  }
+]
