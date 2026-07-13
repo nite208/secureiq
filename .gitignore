@@ -10,3 +10,7 @@ models/
 *.pth
 *.pt
 .venv/
+data/anomaly_results.json
+data/latest_feeds.json
+data/investigation_history.json
+dashboard/node_modules/ echo dashboard/dist/ echo dashboard/.tanstack/ echo data/anomaly_results.json echo data/latest_feeds.json echo data/investigation_history.json

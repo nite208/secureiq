@@ -18,3 +18,14 @@ def test_anomaly_detector_analyzes_text():
     result = detector.analyze("failed login failed login error from 192.168.1.10 admin attempt")
     assert "is_anomaly" in result
     assert "severity" in result
+
+
+def test_anomaly_detector_flags_rule_based_attack_patterns():
+    detector = AnomalyDetector()
+    result = detector.analyze(
+        "failed login failed login failed login from 192.168.1.10 and 10.0.0.5 "
+        "admin escalation rate limit exceeded"
+    )
+    assert result["is_anomaly"] is True
+    assert result["anomaly_score"] >= 50
+    assert result["severity"] in {"high", "critical"}

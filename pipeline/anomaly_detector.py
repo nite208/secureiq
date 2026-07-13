@@ -49,6 +49,11 @@ class AnomalyDetector:
         print("[pipeline] Analyzing log text for anomalies")
         try:
             features = self.extract_features(log_text)
+            failed_attempts = int(features[0])
+            unique_ips = int(features[1])
+            request_count = int(features[2])
+            has_admin = int(features[4])
+
             if self.model is None:
                 self.model = IsolationForest(contamination=self.contamination, random_state=42)
 
@@ -56,22 +61,39 @@ class AnomalyDetector:
                 self._fit_dummy_model()
 
             prediction = self.model.predict([features])[0]
-            score = float(self.model.decision_function([features])[0])
-            is_anomaly = bool(prediction == -1)
-            severity = "low"
-            if is_anomaly and score < -0.1:
+            isolation_score = float(self.model.decision_function([features])[0])
+
+            rule_score = 0.0
+            if failed_attempts >= 3:
+                rule_score += 30
+            if has_admin == 1 and failed_attempts >= 2:
+                rule_score += 25
+            if unique_ips >= 2 and failed_attempts >= 3:
+                rule_score += 20
+            if request_count >= 10 and has_admin == 1:
+                rule_score += 15
+
+            final_score = max(isolation_score, rule_score)
+            is_anomaly = bool(final_score > 50)
+
+            if final_score > 70:
+                severity = "critical"
+            elif final_score > 50:
                 severity = "high"
-            elif is_anomaly:
+            elif final_score > 30:
                 severity = "medium"
+            else:
+                severity = "low"
+
             return {
                 "is_anomaly": is_anomaly,
-                "anomaly_score": round(score, 4),
+                "anomaly_score": round(final_score, 4),
                 "features": {
-                    "failed_attempts": int(features[0]),
-                    "unique_ips": int(features[1]),
-                    "request_count": int(features[2]),
+                    "failed_attempts": failed_attempts,
+                    "unique_ips": unique_ips,
+                    "request_count": request_count,
                     "hour_of_day": int(features[3]),
-                    "has_admin": int(features[4]),
+                    "has_admin": has_admin,
                 },
                 "severity": severity,
             }
