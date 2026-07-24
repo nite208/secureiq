@@ -1,16 +1,43 @@
+# Python
 venv/
+.venv/
 __pycache__/
 *.pyc
 *.pyd
 *.dll
-data/chroma_db/
 *.gz
-.env
-models/
 *.pth
 *.pt
-.venv/
+
+# Environment
+.env
+
+# Data files (runtime generated)
+data/chroma_db/
 data/anomaly_results.json
 data/latest_feeds.json
 data/investigation_history.json
-dashboard/node_modules/ echo dashboard/dist/ echo dashboard/.tanstack/ echo data/anomaly_results.json echo data/latest_feeds.json echo data/investigation_history.json
+
+# ML Models
+models/
+
+# Node / Frontend
+node_modules/
+dashboard/node_modules/
+dashboard/dist/
+dashboard/.tanstack/
+
+# Bun
+bun.lock
+dashboard/bunfig.toml
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
